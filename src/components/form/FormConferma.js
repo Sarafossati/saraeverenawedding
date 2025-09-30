@@ -63,10 +63,11 @@ function FormConferma() {
       {success && <p style={{ color: "green" }}>{success}</p>}
       <label>
         👤 Chi sei tu, meraviglioso invitato? Nome e cognome:
+        <span className="desc">Così possiamo scriverlo sul segnaposto e non chiamarti “quello simpatico con gli occhiali”.</span>
         <input
           type="text"
           name="name"
-          placeholder="Così possiamo scriverlo sul segnaposto e non chiamarti “quello simpatico con gli occhiali”. "
+          placeholder="Nome e Cognome"
           value={formData.name}
           onChange={handleChange}
         />
@@ -96,40 +97,44 @@ function FormConferma() {
       </label>
       <label>
         🧑‍🤝‍🧑 Viene qualcun altro con te? Chi?
+        <span className="desc">Scrivi i nomi, per prepararci a riceverli con un sorriso (e il posto a tavola giusto!).</span>
         <input
           type="text"
           name="guests"
-          placeholder="Scrivi i nomi, per prepararci a riceverli con un sorriso (e il posto a tavola giusto!)."
+          placeholder="Inserisci..."
           value={formData.guests}
           onChange={handleChange}
         />
       </label>
       <label>
         🧒 Hai mini-esseri umani al seguito?
+        <span className="desc">Vogliamo accoglierli al meglio, con sorrisi e magari qualche palloncino.</span>
         <input
           type="text"
           name="children"
-          placeholder="Vogliamo accoglierli al meglio, con sorrisi e magari qualche palloncino."
+          placeholder="Come si chiamano?"
           value={formData.children}
           onChange={handleChange}
         />
       </label>
       <label>
         🧒🧒 Età dei bambini:
+        <span className="desc">Così non prepariamo il menù baby a tuo figlio adolescente.</span>
         <input
           type="number"
           name="childrenAge"
-          placeholder="Così non prepariamo il menù baby a tuo figlio adolescente."
+          placeholder="Quanti anni hanno?"
           value={formData.childrenAge}
           onChange={handleChange}
         />
       </label>
       <label>
         🥦 Allergie, intolleranze o ingredienti da evitare? Il menù sarà 100% vegano e vegetariano, ma niente paura: sarà così buono che anche l’ amante della griglia chiederà il bis!
+        <span className="desc">Segnalaci tutto ciò che dobbiamo sapere per farti mangiare felice e sereno.</span>
         <input
           type="text"
           name="diet"
-          placeholder="Segnalaci tutto ciò che dobbiamo sapere per farti mangiare felice e sereno."
+          placeholder="A cosa dobbiamo prestare attenzione?"
           value={formData.diet}
           onChange={handleChange}
         />
@@ -137,21 +142,22 @@ function FormConferma() {
       <label>
         🏨 Notte del 10/11 Ottobre – Serve un tetto?
         <label>Hai bisogno di pernottare? Per quante persone?</label>
+        <span className="desc">(Pensato per chi arriva dalla Lombardia, Piemonte, Austria o altre terre lontane…)</span>
         <input
           type="text"
           name="night"
-          placeholder="(Pensato per chi arriva dalla Lombardia, Piemonte, Austria o altre terre lontane…)"
+          placeholder="Quante persone e chi?"
           value={formData.night}
           onChange={handleChange}
         />
       </label>
-      💬Hai un messaggio per noi, una richiesta speciale, un pensiero buffo o
+      💬 Hai un messaggio per noi, una richiesta speciale, un pensiero buffo o
       qualcosa che dovremmo includere nel nostro programma del matrimonio (anzi,
       unione civile!!!!)?
-      <label></label>
+      <span className="desc">Scrivi pure tutto quello che ti passa per la testa (quasi tutto 😄). </span>
       <textarea
         name="msg"
-        placeholder="Scrivi pure tutto quello che ti passa per la testa (quasi tutto 😄). "
+        placeholder="Ti leggiamo!"
         value={formData.msg}
         onChange={handleChange}
       />

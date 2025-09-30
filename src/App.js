@@ -1,64 +1,79 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import FormConferma from "./components/form/FormConferma.js";
-// import Logo from "./logo.png"; // Metti il tuo logo nella cartella /src
+import Logo from "./img/logo.png";
 
 function App() {
-  const [activeTab, setActiveTab] = useState(0);
-  const lineFillRef = useRef(null);
+  const [showForm, setShowForm] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const tabs = [
-    { id: "location", label: "Location", content: <p>Indirizzo: Via Roma 123</p> },
-    { id: "sistemazione", label: "Sistemazione", content: <p>Info sulla sistemazione...</p> },
-    { id: "programma", label: "Programma", content: <p>Programma dettagliato...</p> },
-    { id: "regali", label: "Regali", content: <p>Idee regalo...</p> },
-    { id: "conferma", label: "Conferma", content: <FormConferma /> },
-  ];
-
-  useEffect(() => {
-    if (lineFillRef.current) {
-      const fillPercent =
-        tabs.length > 1 ? (activeTab / (tabs.length - 1)) * 100 : 0;
-      lineFillRef.current.style.width = `${fillPercent}%`;
-    }
-  }, [activeTab, tabs.length]);
-
-  const goToConferma = () => {
-    setActiveTab(tabs.length - 1);
-  };
+  const MENU = ["🏰 Location", "🛌 Sistemazione", "🎁 Regali", "❓ FAQ"];
 
   return (
     <div className="App">
       <header className="header">
+        {/* Hamburger Icon */}
+        <div
+          className={`hamburger ${mobileMenuOpen ? "open" : ""}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? "🥕" : "🥦"} Menu
+        </div>
+
         <div className="logo">
-          {/* <img src={Logo} alt="Logo" /> */}
-          logo qui
+          <a href="#">
+            <img src={Logo} alt="Logo" />
+          </a>
         </div>
-        <div className="tabs-wrapper">
-          <ul className="tabs">
-            {tabs.map((tab, idx) => (
-              <li
-                key={tab.id}
-                className={activeTab === idx ? "active" : ""}
-                onClick={() => setActiveTab(idx)}
+
+        {/* Desktop Menu */}
+        <nav className="menu">
+          {MENU.map((menuItem) => {
+            // Rimuove tutto ciò che non è lettera/digit all'inizio
+            const linkText = menuItem.replace(/^[^\w]+/, "").toLowerCase();
+            return (
+              <a
+                key={menuItem}
+                href={`#${linkText}`}
+                onClick={() => setShowForm(false)}
               >
-                <span className="dot" />
-                <span className="label">{tab.label}</span>
-              </li>
-            ))}
-          </ul>
-          <button className="cta-btn" onClick={goToConferma}>
-            Conferma la tua presenza
-          </button>
-        </div>
+                {menuItem}
+              </a>
+            );
+          })}
+        </nav>
+
+        <button className="cta-btn" onClick={() => setShowForm(true)}>
+          Conferma
+        </button>
       </header>
 
-      <div className="timetable-slider">
-        <div className="line">
-          <div className="line-fill" ref={lineFillRef}></div>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <nav className="mobile-menu">
+          {MENU.map((menuItem) => {
+            const linkText = menuItem.replace(/^[^\w]+/, "").toLowerCase();
+            return (
+              <a
+                key={menuItem}
+                href={`#${linkText}`}
+                onClick={() => {
+                  setShowForm(false);
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {menuItem}
+              </a>
+            );
+          })}
+        </nav>
+      )}
+
+      {showForm && (
+        <div className="form-wrapper">
+          <FormConferma />
         </div>
-        <div className="tab-content">{tabs[activeTab].content}</div>
-      </div>
+      )}
     </div>
   );
 }
