@@ -141,11 +141,12 @@ html {
 }
 
 .cta-btn {
-  background-color: #6e552a;
-  color: #fff;
+  border: 1px solid #ad843b !important;
+  color: #ad843b;
+  border-radius: 20px !important;
   border: none;
   border-radius: 6px;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 2rem;
   cursor: pointer;
   font-weight: bold;
   white-space: nowrap;
@@ -153,6 +154,8 @@ html {
 
 .cta-btn:hover {
   background-color: #ad843b;
+  border: 1px solid #ad843b !important;
+  color: #ffffff;
 }
 
 /* --- FORM --- */
@@ -168,7 +171,7 @@ form {
   gap: 1rem;
   text-align: left;
   width: 40%;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 form label {
@@ -218,23 +221,6 @@ form textarea::placeholder {
 .radioBtn input {
   width: auto;
   cursor: pointer;
-}
-
-form button {
-  background-color: #6e552a;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.9rem 1.4rem;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: bold;
-  transition: background 0.3s;
-  align-self: flex-start;
-}
-
-form button:hover {
-  background-color: #ad843b;
 }
 
 /* Hamburger icon */
@@ -291,6 +277,172 @@ form button:hover {
 
 .mobile-menu a:hover {
   color: #ad843b;
+}
+
+/* --- BANNER --- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5vw;
+}
+
+.hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10rem;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h5 {
+  letter-spacing: 2px;
+  color: #a67c65;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #9b6b53;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 20px;
+  line-height: 42px;
+  width: 35vw;
+  font-style: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hero-text button {
+  padding: 0.8rem 2rem;
+  border: 1px solid #cba58b;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background: #cba58b;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.banner {
+  height: 70%;
+  object-fit: contain;
+}
+
+/* --- LOCATION --- */
+.location {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 0;
+}
+
+.location .hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0;
+  padding-right: 4rem;
+}
+
+.location .hero-text p {
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 20px;
+  line-height: 35px;
+  width: 45vw;
+}
+
+/* CONFERMA  */
+.descConferma {
+  margin: 1rem 0;
+  color: #555;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.faq-question .icon {
+  transition: transform 0.3s ease;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 0;
+}
+
+.faq-answer p {
+  margin: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* enough for content */
+  padding: 10px 0;
+}
+
+.faq-item.active .faq-question .icon {
+  transform: rotate(180deg);
+  content: "–";
 }
 
 /* --- RESPONSIVE --- */

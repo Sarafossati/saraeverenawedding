@@ -59,6 +59,7 @@ function FormConferma() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <p style={{ display: 'flex', gap: '5px'}}>Per organizzarci bene e senza ansia, vi chiediamo di confermare la vostra presenza entro il <p className="bold">31 Gennaio 2026.</p></p>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
       <label>
@@ -161,7 +162,7 @@ function FormConferma() {
         value={formData.msg}
         onChange={handleChange}
       />
-      <button type="submit">Invia</button>
+      <button className="cta-btn" style={{backgroundColor: "#ad843b", color: "#FFFFFF"}} type="submit">Invia</button>
     </form>
   );
 }
