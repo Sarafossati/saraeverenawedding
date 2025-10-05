@@ -236,7 +236,6 @@ function App() {
                   className="desc"
                 >
                   📩 IBAN: IT33I0306911619100000060111 - Sara Valeria Fossati
-                  <br />
                   <br /> Grazie per l’affetto, l’entusiasmo, e per esserci.
                 </p>
               </div>
