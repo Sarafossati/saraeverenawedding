@@ -350,7 +350,7 @@ form textarea::placeholder {
 }
 
 .banner {
-  height: 70%;
+  width: 90%;
   object-fit: contain;
 }
 
@@ -359,7 +359,6 @@ form textarea::placeholder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* padding-right: 5vw; */
   padding-left: 0;
 }
 

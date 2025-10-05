@@ -217,7 +217,7 @@ function App() {
             <div className="hero-text-container">
               <div className="hero-text">
                 <h5>I REGALI</h5>
-                <h1 style={{ whiteSpace: "nowrap" }}>
+                <h1>
                   REGALI?
                   <br />
                   VOI SIETE GIÀ ABBASTANZA!

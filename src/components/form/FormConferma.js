@@ -141,7 +141,7 @@ function FormConferma() {
         />
       </label>
       <label>
-      <span className="title">🏨 Notte del 10/11 Ottobre – Serve un tetto?</span>
+      <span className="title">🏨 Notte del 10 Ottobre – Serve un tetto?</span>
         <label>Hai bisogno di pernottare? Per quante persone?</label>
         <span className="formDesc">(Pensato per chi arriva dalla Lombardia, Piemonte, Austria o altre terre lontane…)</span>
         <input
