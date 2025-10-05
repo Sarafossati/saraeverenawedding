@@ -290,14 +290,14 @@ form textarea::placeholder {
 
 .hero-text-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding-top: 10rem;
+  padding-top: 3rem;
 }
 
-.hero-text {
+/* .hero-text {
   max-width: 500px;
-}
+} */
 
 .hero-text h5 {
   letter-spacing: 2px;

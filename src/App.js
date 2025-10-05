@@ -116,7 +116,7 @@ function App() {
                   UNA FESTA DA RICORDARE
                 </h1>
                 {isMobile && <div className="container">
-              <img className="banner" src={Banner} alt="Banner" />
+              <img className="banner" src={Banner} alt="Banner" style={{ width: '70%'}} />
             </div>}
                 <p className="desc">
                   Sì, è tutto vero: <span className="bold">ci sposiamo!</span>{" "}
@@ -237,11 +237,8 @@ function App() {
                 >
                   📩 IBAN: IT33I0306911619100000060111 - Sara Valeria Fossati
                   <br />
-                  📱 Per chi ha domande, dubbi o cuori da inviare via WhatsApp:
-                  <br />
                   Vere: 342 940 1406<br /> Sara: 334 228 3562.
                   <br /> Grazie per l’affetto, l’entusiasmo, e per esserci.
-                  Siete meglio di un bonifico.
                 </p>
               </div>
             </div>
