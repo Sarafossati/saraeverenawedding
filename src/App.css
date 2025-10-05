@@ -295,10 +295,6 @@ form textarea::placeholder {
   padding-top: 3rem;
 }
 
-/* .hero-text {
-  max-width: 500px;
-} */
-
 .hero-text h5 {
   letter-spacing: 2px;
   color: #a67c65;
@@ -321,7 +317,7 @@ form textarea::placeholder {
   margin-bottom: 2rem;
   font-size: 20px;
   line-height: 42px;
-  width: 35vw;
+  width: 40vw;
   font-style: normal;
 }
 

@@ -237,7 +237,6 @@ function App() {
                 >
                   📩 IBAN: IT33I0306911619100000060111 - Sara Valeria Fossati
                   <br />
-                  Vere: 342 940 1406<br /> Sara: 334 228 3562.
                   <br /> Grazie per l’affetto, l’entusiasmo, e per esserci.
                 </p>
               </div>
@@ -250,6 +249,7 @@ function App() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              marginTop: '2rem'
             }}
           >
             <h2 style={{ fontSize: "30px", padding:'0 2rem' }}>
