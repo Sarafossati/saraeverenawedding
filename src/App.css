@@ -177,7 +177,6 @@ form {
 form label {
   font-size: 15px;
   font-weight: 500;
-  color: #444;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -196,9 +195,10 @@ form textarea {
   resize: vertical;
 }
 
-.desc {
+.formDesc {
   font-style: italic;
   font-size: 14px;
+  color: #444
 }
 
 form textarea {
@@ -284,7 +284,8 @@ form textarea::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5vw;
+  overflow: hidden;
+  padding-left: 4rem;
 }
 
 .hero-text-container {
@@ -312,9 +313,12 @@ form textarea::placeholder {
   margin-bottom: 1rem;
 }
 
+.title {
+  font-size: 20px;
+}
+
 .desc {
   margin-bottom: 2rem;
-  color: #555;
   font-size: 20px;
   line-height: 42px;
   width: 35vw;
@@ -355,7 +359,7 @@ form textarea::placeholder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-right: 5vw;
+  /* padding-right: 5vw; */
   padding-left: 0;
 }
 
@@ -369,16 +373,14 @@ form textarea::placeholder {
 
 .location .hero-text p {
   margin-bottom: 2rem;
-  color: #555;
   font-size: 20px;
   line-height: 35px;
-  width: 45vw;
+  /* width: 45vw; */
 }
 
 /* CONFERMA  */
 .descConferma {
   margin: 1rem 0;
-  color: #555;
   font-size: 20px;
   line-height: 35px;
   text-align: center;
@@ -484,5 +486,37 @@ form textarea::placeholder {
 
   form {
     width: 90%;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+
+  .location .hero-text-container {
+    padding-right: 0;
+  }
+
+  .container {
+    width: 100vw
+  }
+
+  .banner {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .hero-text, .hero-text h5, .hero-text h1, .hero-text p {
+    white-space: inherit !important;
+  }
+
+  .desc {
+    width: 90%;
+  }
+
+  .descConferma {
+    padding: 0 2rem;
+    text-align: left;
   }
 }

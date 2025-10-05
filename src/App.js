@@ -7,12 +7,14 @@ import Banner from "./img/bck.png";
 import Location from "./img/location.png";
 import Sistemazione from "./img/sistemazione.png";
 import Regali from "./img/regali.png";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const MENU = ["🏰 Location", "🛌 Sistemazione", "🎁 Regali", "❓ FAQ"];
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -44,7 +46,7 @@ function App() {
           className={`hamburger ${mobileMenuOpen ? "open" : ""}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? "🥕" : "🥦"} Menu
+          {mobileMenuOpen ? "❌" : "🍕"} Menu
         </div>
 
         <div className="logo">
@@ -56,7 +58,6 @@ function App() {
         {/* Desktop Menu */}
         <nav className="menu">
           {MENU.map((menuItem) => {
-            // Rimuove tutto ciò che non è lettera/digit all'inizio
             const linkText = menuItem.replace(/^[^\w]+/, "").toLowerCase();
             return (
               <a
@@ -114,6 +115,9 @@ function App() {
                   <br />
                   UNA FESTA DA RICORDARE
                 </h1>
+                {isMobile && <div className="container">
+              <img className="banner" src={Banner} alt="Banner" />
+            </div>}
                 <p className="desc">
                   Sì, è tutto vero: <span className="bold">ci sposiamo!</span>{" "}
                   🎉 <br />
@@ -135,9 +139,9 @@ function App() {
               </div>
             </div>
 
-            <div className="container">
+            {!isMobile && <div className="container">
               <img className="banner" src={Banner} alt="Banner" />
-            </div>
+            </div>}
           </div>
 
           {/* LOCATION */}
@@ -179,7 +183,7 @@ function App() {
 
           {/* SISTEMAZIONE */}
           <div className="hero" id="sistemazione">
-            <div className="hero-text-container">
+            <div className="hero-text-container" style={{paddingTop: '2rem' }}>
               <div className="hero-text">
                 <h5>LA SISTEMAZIONE</h5>
                 <h1 style={{ whiteSpace: "nowrap" }}>VENI, VIDI, DORMIVI</h1>
@@ -235,7 +239,7 @@ function App() {
                   <br />
                   📱 Per chi ha domande, dubbi o cuori da inviare via WhatsApp:
                   <br />
-                  Vere: 342 940 1406 – Sara: 334 228 3562.
+                  Vere: 342 940 1406<br /> Sara: 334 228 3562.
                   <br /> Grazie per l’affetto, l’entusiasmo, e per esserci.
                   Siete meglio di un bonifico.
                 </p>
@@ -251,7 +255,7 @@ function App() {
               alignItems: "center",
             }}
           >
-            <h2 style={{ fontSize: "30px" }}>
+            <h2 style={{ fontSize: "30px", padding:'0 2rem' }}>
               Diteci se ci sarete (così non prepariamo posto a tavola per Casper
               👻).
             </h2>

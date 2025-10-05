@@ -59,12 +59,12 @@ function FormConferma() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p style={{ display: 'flex', gap: '5px'}}>Per organizzarci bene e senza ansia, vi chiediamo di confermare la vostra presenza entro il <p className="bold">31 Gennaio 2026.</p></p>
+      <p style={{ fontSize: '22px'}}>Per organizzarci bene e senza ansia, vi chiediamo di confermare la vostra presenza entro il 31 Gennaio 2026.</p>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
       <label>
-        👤 Chi sei tu, meraviglioso invitato? Nome e cognome:
-        <span className="desc">Così possiamo scriverlo sul segnaposto e non chiamarti “quello simpatico con gli occhiali”.</span>
+        <span className="title">👤 Chi sei tu, meraviglioso invitato? Nome e cognome:</span>
+        <span className="formDesc">Così possiamo scriverlo sul segnaposto e non chiamarti “quello simpatico con gli occhiali”.</span>
         <input
           type="text"
           name="name"
@@ -74,7 +74,7 @@ function FormConferma() {
         />
       </label>
       <label>
-        Farai parte della festa più bella dell’anno (modestamente parlando)?
+      <span className="title">Farai parte della festa più bella dell’anno (modestamente parlando)?</span>
       </label>
       <label className="radioBtn">
         <input
@@ -97,8 +97,8 @@ function FormConferma() {
         😢 Ahimè, devo declinare l’invito
       </label>
       <label>
-        🧑‍🤝‍🧑 Viene qualcun altro con te? Chi?
-        <span className="desc">Scrivi i nomi, per prepararci a riceverli con un sorriso (e il posto a tavola giusto!).</span>
+      <span className="title">🧑‍🤝‍🧑 Viene qualcun altro con te? Chi?</span>
+        <span className="formDesc">Scrivi i nomi, per prepararci a riceverli con un sorriso (e il posto a tavola giusto!).</span>
         <input
           type="text"
           name="guests"
@@ -108,8 +108,8 @@ function FormConferma() {
         />
       </label>
       <label>
-        🧒 Hai mini-esseri umani al seguito?
-        <span className="desc">Vogliamo accoglierli al meglio, con sorrisi e magari qualche palloncino.</span>
+      <span className="title">🧒 Hai mini-esseri umani al seguito?</span>
+        <span className="formDesc">Vogliamo accoglierli al meglio, con sorrisi e magari qualche palloncino.</span>
         <input
           type="text"
           name="children"
@@ -119,8 +119,8 @@ function FormConferma() {
         />
       </label>
       <label>
-        🧒🧒 Età dei bambini:
-        <span className="desc">Così non prepariamo il menù baby a tuo figlio adolescente.</span>
+      <span className="title">🧒🧒 Età dei bambini:</span>
+        <span className="formDesc">Così non prepariamo il menù baby a tuo figlio adolescente.</span>
         <input
           type="number"
           name="childrenAge"
@@ -130,8 +130,8 @@ function FormConferma() {
         />
       </label>
       <label>
-        🥦 Allergie, intolleranze o ingredienti da evitare? Il menù sarà 100% vegano e vegetariano, ma niente paura: sarà così buono che anche l’ amante della griglia chiederà il bis!
-        <span className="desc">Segnalaci tutto ciò che dobbiamo sapere per farti mangiare felice e sereno.</span>
+      <span className="title">🥦 Allergie, intolleranze o ingredienti da evitare? Il menù sarà 100% vegano e vegetariano, ma niente paura: sarà così buono che anche l’ amante della griglia chiederà il bis!</span>
+        <span className="formDesc">Segnalaci tutto ciò che dobbiamo sapere per farti mangiare felice e sereno.</span>
         <input
           type="text"
           name="diet"
@@ -141,9 +141,9 @@ function FormConferma() {
         />
       </label>
       <label>
-        🏨 Notte del 10/11 Ottobre – Serve un tetto?
+      <span className="title">🏨 Notte del 10/11 Ottobre – Serve un tetto?</span>
         <label>Hai bisogno di pernottare? Per quante persone?</label>
-        <span className="desc">(Pensato per chi arriva dalla Lombardia, Piemonte, Austria o altre terre lontane…)</span>
+        <span className="formDesc">(Pensato per chi arriva dalla Lombardia, Piemonte, Austria o altre terre lontane…)</span>
         <input
           type="text"
           name="night"
@@ -152,10 +152,10 @@ function FormConferma() {
           onChange={handleChange}
         />
       </label>
-      💬 Hai un messaggio per noi, una richiesta speciale, un pensiero buffo o
+      <span className="title"> 💬 Hai un messaggio per noi, una richiesta speciale, un pensiero buffo o
       qualcosa che dovremmo includere nel nostro programma del matrimonio (anzi,
-      unione civile!!!!)?
-      <span className="desc">Scrivi pure tutto quello che ti passa per la testa (quasi tutto 😄). </span>
+      unione civile!!!!)?</span>
+      <span className="formDesc">Scrivi pure tutto quello che ti passa per la testa (quasi tutto 😄). </span>
       <textarea
         name="msg"
         placeholder="Ti leggiamo!"
