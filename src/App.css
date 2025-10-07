@@ -413,6 +413,7 @@ form textarea::placeholder {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  color: #000000 !important;
 }
 
 .faq-question .icon {
@@ -460,6 +461,10 @@ form textarea::placeholder {
     gap: 0;
   }
 
+  .hero-text {
+    margin-top: 120px;
+  }
+
   .menu {
     display: none;
   }
@@ -498,7 +503,7 @@ form textarea::placeholder {
   }
 
   .banner {
-    width: 100%;
+    width: 100% !important;
     object-fit: contain;
   }
 

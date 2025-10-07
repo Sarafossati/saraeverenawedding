@@ -152,7 +152,7 @@ function App() {
             <div className="hero-text-container">
               <div className="hero-text">
                 <h5>LA LOCATION</h5>
-                <h1 style={{ whiteSpace: "nowrap" }}>
+                <h1 style={{ whiteSpace: `${isMobile ? 'inherit' : "nowrap"}` }}>
                   UN MATRIMONIO
                   <br />
                   CON VISTA
