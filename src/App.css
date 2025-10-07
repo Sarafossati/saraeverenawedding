@@ -144,6 +144,7 @@ html {
   border: 1px solid #ad843b !important;
   color: #ad843b;
   border-radius: 20px !important;
+  background-color: transparent;
   border: none;
   border-radius: 6px;
   padding: 0.75rem 2rem;
@@ -441,6 +442,11 @@ form textarea::placeholder {
 .faq-item.active .faq-question .icon {
   transform: rotate(180deg);
   content: "–";
+}
+
+textarea::placeholder, input::placeholder {
+  letter-spacing: 0;
+  font-family: "Vidaloka", serif !important;
 }
 
 /* --- RESPONSIVE --- */

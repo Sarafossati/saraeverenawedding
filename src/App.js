@@ -267,7 +267,7 @@ function App() {
             <button
               className="cta-btn"
               style={{ marginBottom: "3rem" }}
-              onClick={() => setShowForm(true)}
+              onClick={() => {setShowForm(true); window.scrollTo(0, 0);}}
             >
               Conferma
             </button>
