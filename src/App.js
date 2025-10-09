@@ -106,7 +106,7 @@ function App() {
           {/* BANNER */}
           <div className="hero" id="intro">
             <div className="hero-text-container">
-              <div className="hero-text">
+              <div className="hero-text titleFrauen">
                 <h5>SARA E VERE</h5>
                 <h1 style={{ whiteSpace: "nowrap" }}>
                   DUE SPOSE,
