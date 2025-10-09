@@ -480,7 +480,7 @@ textarea::placeholder, input::placeholder {
   }
 
   form {
-    margin: 9rem 0 2rem 0;
+    margin: 9rem 0;
   }
 
   .hamburger {

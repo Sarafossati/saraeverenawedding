@@ -71,7 +71,7 @@ function App() {
           })}
         </nav>
 
-        <button className="cta-btn" onClick={() => setShowForm(true)}>
+        <button className="cta-btn" onClick={() => {setShowForm(true); window.scrollTo(0, 0);}}>
           Conferma
         </button>
       </header>
