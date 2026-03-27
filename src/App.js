@@ -236,7 +236,7 @@ function App() {
                   style={{ marginTop: "1rem", lineHeight: "44px" }}
                   className="desc"
                 >
-                  📩 IBAN: IT33I0306911619100000060111 - Sara Valeria Fossati
+                  📩 IBAN: IT11J0808111602000304267745 - DELPONTE VERENA E FOSSATI SARA VALERIA
                   <br /> Grazie per l’affetto, l’entusiasmo, e per esserci.
                 </p>
               </div>
