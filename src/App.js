@@ -177,7 +177,7 @@ function App() {
                   .<br /> Porta la macchina fotografica mentale e preparati a un
                   po’ di magia, natura, risate e forchette alzate.
                 </p>
-                <button className="cta-btn" type="submit"><a style={{textDecoration: 'none', color: "#ad843b"}} href="https://maps.app.goo.gl/VC5KSt6NTGm633f28" target="_blank">📍 Indicazioni Google Maps</a></button>
+                <button className="cta-btn" type="submit"><a style={{textDecoration: 'none', color: "#ad843b"}} href="https://maps.app.goo.gl/VC5KSt6NTGm633f28" target="_blank" rel="noreferrer">📍 Indicazioni Google Maps</a></button>
               </div>
             </div>
           </div>
